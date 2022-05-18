@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  justify-content: space-between;
+  background-color: #c0c0c0;
+}
+
+.navbar-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.navbar-right {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.navbar-logo {
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+input {
+  width: 90%;
+  border: none;
+  padding: 4px 10px;
+  font-size: 100%;
+  height: 32px;
+}
+
+.dicts-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.dict-container {
+  width: 640px;
+  min-height: 70vh;
+  background-color: #e0e0e0;
+  border: 1px solid #888888;
+  margin: 10px;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.word-container {
+  width: 600px;
+}
+
+.word-header {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.word-name {
+  cursor: pointer;
+  font-size: 3rem;
+  margin: 0;
+  transition: all ease 0.3s;
+}
+
+.wn-small {
+  font-size: 1.5rem;
+}
+
+.word-phonetic {
+  font-style: italic;
+  font-size: 0.8rem;
+  margin-left: 20px;
+  letter-spacing: 2px;
+}
+
+.wp-hidden {
+  display: none;
+}
+
+.bookmark-span {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #ff5555;
+}
+
+.word-body {
+  padding: 0;
+  overflow: hidden;
+  transition: height ease 0.3s;
+}
+
+.meanings-pos {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 0.75rem;
+}
+
+.meanings-body {
+  padding: 0 20px;
+  font-size: 0.8rem;
+}
+
+.dfs-body {
+  font-size: 0.8rem;
+  margin-bottom: 30px;
+}
+
+.dfs-example {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.synonyms-header {
+  margin: 0 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.synonym {
+  margin: 5px 10px;
+  font-size: 14px;
+}
+
+.empty-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 640px;
+  height: 70vh;
+}
+
+.empty-text {
+  text-align: center;
+  opacity: 50%;
+  font-size: 1.75rem;
+  font-weight: 500;
+}

@@ -24,7 +24,6 @@ const Word = ({ word, defaultExpanded }) => {
     } else {
       setIsSaved(false); // ADD
     }
-    console.log(word);
   }, [word, isSaved, saved]);
 
   return (

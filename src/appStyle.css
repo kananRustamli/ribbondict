@@ -3,6 +3,11 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+main {
+  position: relative;
+  z-index: 0;
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -23,16 +28,20 @@ body {
   flex: 3;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
+  padding-right: 10px;
 }
 
 .navbar-logo {
+  font-size: 120%;
+  padding: 0;
+  margin: 0;
   font-weight: 800;
   letter-spacing: 2px;
 }
 
 input {
-  width: 90%;
+  width: 100%;
   border: none;
   padding: 4px 10px;
   font-size: 100%;
@@ -40,25 +49,27 @@ input {
 }
 
 .dicts-container {
+  background-color: #025152;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 .dict-container {
-  width: 640px;
-  min-height: 70vh;
-  background-color: #e0e0e0;
-  border: 1px solid #888888;
-  margin: 10px;
-  padding: 0 20px;
+  height: 90vh;
+  width: 520px;
+  background-color: #cfd3d0;
   flex-wrap: wrap;
+  padding: 0 20px;
 }
 
 .word-container {
-  width: 600px;
+  max-width: 100%;
 }
 
 .word-header {
+  width: 100%;
   margin-top: 10px;
   display: flex;
   align-items: center;
@@ -135,15 +146,71 @@ input {
 
 .empty-container {
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 640px;
-  height: 70vh;
+  align-items: center;
 }
 
 .empty-text {
-  text-align: center;
   opacity: 50%;
   font-size: 1.75rem;
   font-weight: 500;
+}
+
+.mobile-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: red;
+  height: 100vh;
+  width: 100vw;
+}
+
+.sidebar-button {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-left {
+    display: none;
+  }
+
+  .navbar-right {
+    margin-right: 0;
+  }
+
+  .sidebar-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+  }
+
+  input {
+    width: 100%;
+    margin-left: 5px;
+    height: 32px;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .open {
+    display: block;
+  }
+
+  .mobile-container {
+    padding: 0 20px 20px 20px;
+    width: auto;
+    height: auto;
+    background: #025152;
+  }
+
+  .mobile-topbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 70px;
+  }
 }
